@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.7'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.pyatkin'
+version = '0.0.1-SNAPSHOT'
+description = 'cassandra'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // DataStax Cassandra driver (core + query builder)
+    implementation 'com.datastax.oss:java-driver-core:4.17.0'
+    implementation 'com.datastax.oss:java-driver-query-builder:4.17.0'
+    implementation 'com.github.spotbugs:spotbugs-annotations:4.9.8'
+}

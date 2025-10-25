@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+cassandra:
+  config-path: config/cassandra.conf
+
+logging:
+  level:
+    root: INFO
